@@ -2,7 +2,7 @@ angular.module('todoApp')
 .config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /home
-  // $urlRouterProvider.otherwise("/login");
+  $urlRouterProvider.otherwise("/login");
   //
   // Now set up the states
   $stateProvider

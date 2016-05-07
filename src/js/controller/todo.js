@@ -85,6 +85,14 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
       }
     }
 
+    todoList.logout = function () {
+        TodoListService.logout()
+        todoList.isLogin = TodoListService.status_login()
+        $location.path("login")
+        // console.log($location.absUrl())
+      }
+
+
     todoList.remaining = function () {
       var count = 0
       angular.forEach(todoList.todos, function (todo) {

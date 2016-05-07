@@ -23,46 +23,63 @@
   <!-- some navigation -->
   <div ng-controller="TodoListController as todoList">
     <nav class="navbar bg-green">
-
-      <div class="navbar-header">
-        <div class="navbar-brand font-white">STUDENT ENROLLMENT SYSTEM</div>
-      </div>
-      <ul class="nav navbar-nav nav-pills">
-        <li class="font-white" role="presentation">
-
-          <!-- <a ui-sref="home">
-          <div class="link">
-          Home
+      <div class="container-fluid col-md-offset-2 col-md-8">
+        <div class="navbar-header">
+          <div class="navbar-brand font-white">STUDENT ENROLLMENT SYSTEM</div>
         </div>
-      </a> -->
+        <ul class="nav navbar-nav nav-pills">
+          <li class="font-white" role="presentation">
 
+            <!-- <a ui-sref="home">
+            <div class="link">
+            Home
+          </div>
+        </a> -->
+
+      </li>
+      <!-- <li role="presentation" ng-show="!login">
+        <a ui-sref="login">
+          <div class="link">
+            <strong>Login</strong>
+          </div>
+        </a>
+      </li> -->
+      <li role="presentation" ng-show="login">
+        <a ui-sref="registration">
+          <div class="link">
+            <strong>Registration</strong>
+          </div>
+        </a>
+      </li>
+      <li role="presentation" ng-show="login">
+        <a ui-sref="user_profile">
+          <div class="link">
+            <strong>User Information</strong>
+          </div>
+        </a>
+      </li>
+
+      <!-- <li class="navbar-right">
+      <img src="http://www.ku.ac.th/web2012/resources/template2/ui/images/logo.png">
+    </li> -->
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+    <li role="presentation" ng-show="login">
+      <a ui-sref="login" ng-click="todoList.logout()">
+        <div class="link">
+          <strong>Log out</strong>
+        </div>
+      </a>
     </li>
     <li role="presentation" ng-show="!login">
       <a ui-sref="login">
         <div class="link">
-          Login
+          <strong>Log in</strong>
         </div>
       </a>
     </li>
-    <li role="presentation" ng-show="login">
-      <a ui-sref="registration">
-        <div class="link">
-          Registration
-        </div>
-      </a>
-    </li>
-    <li role="presentation" ng-show="login">
-      <a ui-sref="user_profile">
-        <div class="link">
-          User Information
-        </div>
-      </a>
-    </li>
-
-    <!-- <li class="navbar-right">
-    <img src="http://www.ku.ac.th/web2012/resources/template2/ui/images/logo.png">
-  </li> -->
-</ul>
+  </ul>
+</div>
 </nav>
 </div>
 <div growl></div>
