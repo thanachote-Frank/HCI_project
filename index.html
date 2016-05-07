@@ -1,27 +1,76 @@
 <!doctype html>
 <html ng-app="todoApp">
-  <head>
-    <!-- CSS file -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="src/css/todo.css">
-  </head>
-  <body>
-    <!-- Import scripts -->
-    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<head>
+  <!-- CSS file -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/angular-growl-v2/build/angular-growl.min.css">
+  <!-- <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css"> -->
+  <link rel="stylesheet" href="src/css/todo.css">
+</head>
+<body>
+  <!-- Import scripts -->
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.js"></script> -->
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular-growl-v2/build/angular-growl.min.js"></script>
 
-    <!-- App controller -->
-    <script src="src/js/controller/todo.js"></script>
-    <script src="src/js/route/route.js"></script>
+  <!-- App controller -->
+  <script src="src/js/controller/todo.js"></script>
+  <script src="src/js/route/route.js"></script>
 
-    <!-- some navigation -->
-    <ul class="nav nav-pills">
-    <li role="presentation"><a ui-sref="home">Home</a></li>
-    <li role="presentation"><a ui-sref="changepage">Change Page</a></li>
-  </ul>
+  <!-- some navigation -->
+  <div ng-controller="TodoListController as todoList">
+    <nav class="navbar bg-green">
 
-    <div ui-view></div>
-  </body>
+      <div class="navbar-header">
+        <div class="navbar-brand font-white">STUDENT ENROLLMENT SYSTEM</div>
+      </div>
+      <ul class="nav navbar-nav nav-pills">
+        <li class="font-white" role="presentation">
+
+          <!-- <a ui-sref="home">
+          <div class="link">
+          Home
+        </div>
+      </a> -->
+
+    </li>
+    <li role="presentation" ng-show="!login">
+      <a ui-sref="login">
+        <div class="link">
+          Login
+        </div>
+      </a>
+    </li>
+    <li role="presentation" ng-show="login">
+      <a ui-sref="registration">
+        <div class="link">
+          Registration
+        </div>
+      </a>
+    </li>
+    <li role="presentation" ng-show="login">
+      <a ui-sref="user_profile">
+        <div class="link">
+          User Information
+        </div>
+      </a>
+    </li>
+
+    <!-- <li class="navbar-right">
+    <img src="http://www.ku.ac.th/web2012/resources/template2/ui/images/logo.png">
+  </li> -->
+</ul>
+</nav>
+</div>
+<div growl></div>
+<div ui-view></div>
+<!-- <footer class="footer">
+<div class="container">
+<p class="text-muted">Place sticky footer content here.</p>
+</div>
+</footer> -->
+</body>
 </html>

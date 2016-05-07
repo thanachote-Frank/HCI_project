@@ -1,0 +1,257 @@
+<div ng-controller="TodoListController as todoList">
+  <div class="container">
+    <h2>Your Courses</h2>
+    <div class="row">
+      <div class="margin-top">
+        <div class="col-sm-10 col-sm-offset-1">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <!-- <th>#</th> -->
+                <th class="col-sm-1 text-center">Course ID</th>
+                <th class="col-sm-6">Name</th>
+                <th class="col-sm-1 text-center">Section</th>
+                <th class="col-sm-1 text-center">Credit</th>
+                <th class="col-sm-1"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="course in todoList.my_courses">
+                <!-- <th scope="row">1</th> -->
+                <td>{{course.id}}</td>
+                <td>
+                  {{course.name.en}}
+                  <br>
+                  {{course.name.th}}
+                </td>
+                <td class="text-center">
+
+                  {{course.selected_section}}
+                  <!-- <a class="btn" href="#">View details &raquo;</a>
+                  <a class="btn btn-primary pull-right" href="#">Enroll</a> -->
+                </td>
+                <td class="text-center">
+                  {{todoList._course_list[course.id].credit.total}}
+                </td>
+                <td class="text-center">
+                  <button type="button" class="btn btn-danger" href="#" ng-click="todoList.remove_course(course)">Drop</button>
+                </td>
+              </tr>
+              <tr ng-show="!todoList.my_courses.length">
+                <!-- <th scope="row">1</th> -->
+                <td>-</td>
+                <td>-</td>
+                <td class="text-center">
+                  -
+                  <!-- <a class="btn" href="#">View details &raquo;</a>
+                  <a class="btn btn-primary pull-right" href="#">Enroll</a> -->
+                  <!-- </td> -->
+                  <td class="text-center">
+                    -
+                  </td>
+                  <td>
+                    <!-- <button type="button" class="btn btn-danger pull-right" href="#" ng-click="todoList.remove_course(course)">Drop</button> -->
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="3"><strong>Total Credit</strong></td>
+                  <td class="text-center"><strong>{{todoList.get_total_credit()}}/22</strong></td>
+                  <td></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container margin-top">
+      <h2>Courses</h2>
+      <!-- <div ng-controller="TodoListController as todoList"> -->
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div class="margin-top">
+            <div class="input-group stylish-input-group">
+              <input ng-model="search.id" type="text" class="form-control"  placeholder="Search By Course ID">
+              <span class="input-group-addon">
+                <button type="submit">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="margin-top">
+          <div class="col-sm-10 col-sm-offset-1">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <!-- <th>#</th> -->
+                  <th class="col-sm-1">Course ID</th>
+                  <th class="col-sm-9">Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="course in todoList.course_list | filter:search">
+                  <!-- <th scope="row">1</th> -->
+                  <td><p class="regis_info">{{course.id}}</p></td>
+                  <td>
+                    <span class="regis_info">{{course.name.en}}
+                      <!-- <div class=""> -->
+                      <!-- <span class="badge tab-space">Lab: {{todoList._course_list[course.id].credit.lab}}</span>
+                      <span class="badge tab-space">Lecture: {{todoList._course_list[course.id].credit.lecture}}</span> -->
+                      <!-- </div> -->
+                    </span>
+                    <div class="btn_regis_info">
+                      <span>{{course.name.th}}</span>
+
+                      <!-- <a class="btn" href="#">View details &raquo;</a> -->
+                      <!-- <div class=""> -->
+                      <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-target="#info_{{course.id}}" aria-expanded="false" aria-controls="collapseExample">
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                      </button>
+                      <!-- <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#{{course.id}}" ng-show="!!todoList._course_list[course.id].sections.length" ng-class="{'btn-warning': todoList.my_courses.indexOf(course) != -1}" ng-disabled="todoList.my_courses.indexOf(course) != -1">
+                      <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Enroll
+                    </button> -->
+                    <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#{{course.id}}" ng-show="!!todoList._course_list[course.id].sections.length && todoList.my_courses.indexOf(course) == -1">
+                      <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Enroll
+                    </button>
+                    <button type="button" class="btn btn-warning pull-right disabled" data-toggle="modal" data-target="#{{course.id}}" ng-show="todoList.my_courses.indexOf(course) != -1" disabled>
+                      <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Enrolled
+                    </button>
+                    <button type="button" class="btn btn-default pull-right disabled" disabled data-toggle="modal" data-target="#{{course.id}}" ng-show="!todoList._course_list[course.id].sections.length">
+                      <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Enroll
+                    </button>
+                  </div>
+
+                  <div class="collapse" id="info_{{course.id}}">
+                    <div class="well">
+                      <span class="badge tab-space">Lecture: {{todoList._course_list[course.id].credit.lecture}}</span>
+                      <span class="badge tab-space">Lab: {{todoList._course_list[course.id].credit.lab}}</span>
+                      <h4>Description</h4>
+                      <p>{{todoList._course_list[course.id].description.en}}</p>
+                      <br>
+                      <h4>คำอธิบาย</h4>
+                      <p>{{todoList._course_list[course.id].description.th}}</p>
+                    </div>
+                  </div>
+                  <!-- <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#{{course.id}}">Enroll</button> -->
+                  <!-- Button trigger modal -->
+                  <!-- <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#{{course.id}}">
+                  Enroll &raquo;
+                </button> -->
+                <!-- </div> -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="{{course.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header bg-green font-white">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">{{course.id}}</h4>
+                      </div>
+                      <div class="modal-body">
+                        <table class="table borderless">
+                          <tbody>
+                            <tr>
+                              <td class="col-sm-3">Course Name: </td>
+                              <td class="col-sm-9">{{course.name.en}}</td>
+                            </tr>
+
+                            <tr>
+                              <td class="col-sm-3">ชื่อวิชา: </td>
+                              <td class="col-sm-9">{{course.name.th}}</td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+
+                        <div class="panel panel-primary">
+                          <!-- Default panel contents -->
+                          <div class="panel-heading">Schedule</div>
+
+                          <!-- Table -->
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Section</th>
+                                <th>Day/Time</th>
+                                <th>Enrolled/Max</th>
+                                <th>Instructor</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr ng-repeat="section in todoList._course_list[course.id].sections">
+                                <td>{{section.id}}</td>
+                                <td>{{section.date}}</td>
+                                <td class="text-center">{{section.enrolled}}/{{section.accept}}</td>
+                                <td><p ng-repeat="instructor in section.instructors">{{instructor}}</p></td>
+                                <td>
+                                  <button type="button" class="btn btn-primary pull-right" ng-click="todoList.add_course(course,450)" data-dismiss="modal">Add</button>
+                                </td>
+                              </tr>
+                              <!-- <tr>
+                              <td>451</td>
+                              <td>Tue/9:00-12:00</td>
+                              <td>Mary <button type="button" class="btn btn-primary pull-right" ng-click="todoList.add_course(course,451)" data-dismiss="modal">Add</button></td>
+                            </tr>
+                            <tr>
+                            <td>452</td>
+                            <td>Tue/9:00-12:00</td>
+                            <td>July <button type="button" class="btn btn-primary pull-right" ng-click="todoList.add_course(course,452)" data-dismiss="modal">Add</button></td>
+                          </tr> -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary" ng-click="todoList.add_course(course)" data-dismiss="modal">Add</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <!-- Modal -->
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+<!-- </div> -->
+</div>
+</div>
+<!-- <div ng-controller="ModalDemoCtrl">
+<script type="text/ng-template" id="myModalContent.html">
+<div class="modal-header">
+<h3 class="modal-title">I'm a modal!</h3>
+</div>
+<div class="modal-body">
+<ul>
+<li ng-repeat="item in items">
+<a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
+</li>
+</ul>
+Selected: <b>{{ selected.item }}</b>
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+</div>
+</script>
+
+<button type="button" class="btn btn-default" ng-click="open()">Open me!</button>
+<button type="button" class="btn btn-default" ng-click="open('lg')">Large modal</button>
+<button type="button" class="btn btn-default" ng-click="open('sm')">Small modal</button>
+<button type="button" class="btn btn-default" ng-click="toggleAnimation()">Toggle Animation ({{ animationsEnabled }})</button>
+<div ng-show="selected">Selection from a modal: {{ selected }}</div>
+</div> -->
