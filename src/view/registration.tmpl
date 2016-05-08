@@ -1,10 +1,12 @@
-<div ng-controller="TodoListController as todoList">
-  <div class="container">
-    <h2>Your Courses</h2>
+<div ng-controller="TodoListController as todoList" scroll id="page">
+  <div class="container margin-top-x">
     <div class="row">
-      <div class="margin-top">
+      <div>
+        <div class="col-sm-10 col-sm-offset-0"><h3>Your Courses</h3></div>
         <div class="col-sm-10 col-sm-offset-1">
-          <table class="table table-bordered">
+          <!-- <h2>Your Courses</h2> -->
+          <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#json" ng-click="todoList.create_json()">Export JSON</button>
+          <table class="table table-bordered margin-top">
             <thead>
               <tr>
                 <!-- <th>#</th> -->
@@ -12,13 +14,14 @@
                 <th class="col-sm-6">Name</th>
                 <th class="col-sm-1 text-center">Section</th>
                 <th class="col-sm-1 text-center">Credit</th>
+                <th class="col-sm-1 text-center">Type</th>
                 <th class="col-sm-1"></th>
               </tr>
             </thead>
             <tbody>
               <tr ng-repeat="course in todoList.my_courses">
                 <!-- <th scope="row">1</th> -->
-                <td>{{course.id}}</td>
+                <td class="text-center">{{course.id}}</td>
                 <td>
                   {{course.name.en}}
                   <br>
@@ -32,6 +35,9 @@
                 </td>
                 <td class="text-center">
                   {{todoList._course_list[course.id].credit.total}}
+                </td>
+              <td class="text-center" style="text-transform: capitalize;">
+                  {{todoList._course_list[course.id]['credit_type']}}
                 </td>
                 <td class="text-center">
                   <button type="button" class="btn btn-danger" href="#" ng-click="todoList.remove_course(course)">Drop</button>
@@ -49,9 +55,11 @@
                   <td class="text-center">
                     -
                   </td>
-                  <td>
+                  <td class="text-center">
+                    -
                     <!-- <button type="button" class="btn btn-danger pull-right" href="#" ng-click="todoList.remove_course(course)">Drop</button> -->
                   </td>
+                  <td></td>
                 </tr>
               </tbody>
               <tfoot>
@@ -59,22 +67,47 @@
                   <td colspan="3"><strong>Total Credit</strong></td>
                   <td class="text-center"><strong>{{todoList.get_total_credit()}}/22</strong></td>
                   <td></td>
+                  <td></td>
                 </tr>
               </tfoot>
             </table>
+            <!-- Large modal -->
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#json" ng-click="todoList.create_json()">Export JSON</button> -->
+
+            <div class="modal fade bs-example-modal-lg" id="json" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header bg-green font-white">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Export JSON</h4>
+                  </div>
+                  <div class="modal-body">
+                    <pre>{{todoList.json}}</pre>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" ng-click="todoList.save_to_file()">Download</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <button ng-click="todoList.save_to_file()">Export JSON</button> -->
           </div>
         </div>
       </div>
     </div>
 
 
-    <div class="container margin-top">
-      <h2>Courses</h2>
+    <div class="container margin-top-m">
+      <!-- <h2>Courses</h2> -->
       <!-- <div ng-controller="TodoListController as todoList"> -->
       <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-sm-10 col-sm-offset-0"><h3>Courses</h3></div>
+      </div>
           <div class="margin-top">
-            <div class="input-group stylish-input-group">
+            <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+            <div class="input-group stylish-input-group" ng-class="{'navbar-fixed-top' : boolChangeClass, 'col-sm-6': boolChangeClass, 'col-sm-offset-3': boolChangeClass, 'cus-nav':boolChangeClass}">
               <input ng-model="search.id" type="text" class="form-control"  placeholder="Search By Course ID">
               <span class="input-group-addon">
                 <button type="submit">
@@ -82,6 +115,7 @@
                 </button>
               </span>
             </div>
+
           </div>
         </div>
       </div>
@@ -92,14 +126,14 @@
               <thead>
                 <tr>
                   <!-- <th>#</th> -->
-                  <th class="col-sm-1">Course ID</th>
+                  <th class="col-sm-1 text-center">Course ID</th>
                   <th class="col-sm-9">Name</th>
                 </tr>
               </thead>
               <tbody>
                 <tr ng-repeat="course in todoList.course_list | filter:search">
                   <!-- <th scope="row">1</th> -->
-                  <td><p class="regis_info">{{course.id}}</p></td>
+                  <td><p class="regis_info text-center">{{course.id}}</p></td>
                   <td>
                     <span class="regis_info">{{course.name.en}}
                       <!-- <div class=""> -->
@@ -122,10 +156,10 @@
                       <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Enroll
                     </button>
                     <button type="button" class="btn btn-warning pull-right disabled" data-toggle="modal" data-target="#{{course.id}}" ng-show="todoList.my_courses.indexOf(course) != -1" disabled>
-                      <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Enrolled
+                       Enrolled
                     </button>
-                    <button type="button" class="btn btn-default pull-right disabled" disabled data-toggle="modal" data-target="#{{course.id}}" ng-show="!todoList._course_list[course.id].sections.length">
-                      <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Enroll
+                    <button type="button" class="btn btn-default pull-right disabled" style="background-color:gray; color:white;"disabled data-toggle="modal" data-target="#{{course.id}}" ng-show="!todoList._course_list[course.id].sections.length">
+                       Enroll
                     </button>
                   </div>
 
@@ -148,8 +182,8 @@
                 <!-- </div> -->
 
                 <!-- Modal -->
-                <div class="modal fade" id="{{course.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                  <div class="modal-dialog" role="document">
+                <div class="modal fade bs-example-modal-lg" id="{{course.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                       <div class="modal-header bg-green font-white">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -168,6 +202,32 @@
                               <td class="col-sm-9">{{course.name.th}}</td>
                             </tr>
 
+                            <tr>
+                              <td class="col-sm-3">Credit Type: </td>
+                              <td class="col-sm-9">
+
+                                <div class="btn-group" data-toggle="buttons">
+
+                            			<label class="btn btn-default btn_select" ng-class="{'active': todoList._course_list[course.id]['credit_type'] == 'credit'}"  ng-click="todoList._course_list[course.id]['credit_type'] = 'credit'">
+                                    <input type="radio">
+                            				[ <span class="glyphicon glyphicon-ok"></span> ] Credit
+                            			</label>
+
+                                  <label class="btn btn-default btn_select" ng-class="{'active': todoList._course_list[course.id]['credit_type'] == 'audit'}"  ng-click="todoList._course_list[course.id]['credit_type'] = 'audit'">
+                                    <input type="radio">
+                            				[ <span class="glyphicon glyphicon-ok"></span> ] Audit
+                            			</label>
+
+                            		</div>
+
+                                <!-- <div class="btn-group" role="group" aria-label="..."> -->
+                                  <!-- <button type="button" class="btn btn-default">Credit</button> -->
+                                  <!-- <button type="button" class="btn btn-default">Middle</button> -->
+                                  <!-- <button type="button" class="btn btn-default">Audit</button> -->
+                                <!-- </div> -->
+                              </td>
+                            </tr>
+
                           </tbody>
                         </table>
 
@@ -181,6 +241,7 @@
                               <tr>
                                 <th>Section</th>
                                 <th>Day/Time</th>
+                                <th>Localtion</th>
                                 <th>Enrolled/Max</th>
                                 <th>Instructor</th>
                                 <th></th>
@@ -190,10 +251,11 @@
                               <tr ng-repeat="section in todoList._course_list[course.id].sections">
                                 <td>{{section.id}}</td>
                                 <td>{{section.date}}</td>
+                                <td>{{section.location}}</td>
                                 <td class="text-center">{{section.enrolled}}/{{section.accept}}</td>
                                 <td><p ng-repeat="instructor in section.instructors">{{instructor}}</p></td>
                                 <td>
-                                  <button type="button" class="btn btn-primary pull-right" ng-click="todoList.add_course(course,450)" data-dismiss="modal">Add</button>
+                                  <button type="button" class="btn btn-primary pull-right" ng-click="todoList.add_course(course,450)" data-dismiss="modal">Enroll</button>
                                 </td>
                               </tr>
                               <!-- <tr>
@@ -226,9 +288,11 @@
   </div>
 </div>
 </div>
+<!-- <a class="btn btn-info font-white" style="background-color:#143153;position: fixed;right: 20px;bottom: 60px;" ng-show="boolChangeClass" ng-click-"todoList.gotoSerach()">Back To Top</a> -->
 
 <!-- </div> -->
 </div>
+<button class="btn btn-info font-white" style="background-color:#143153;position: fixed;right: 20px;bottom: 60px;" ng-show="boolChangeClass" ng-click="todoList.gotoSerach()">Back To Top</button>
 </div>
 <!-- <div ng-controller="ModalDemoCtrl">
 <script type="text/ng-template" id="myModalContent.html">

@@ -1,0 +1,969 @@
+{
+  "01219245": {
+    "name": {
+      "th": "กระบวนการพัฒนาซอฟต์แวร์เชิงเดี่ยว",
+      "en": "Individual Software Development Process"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [
+      {
+        "simultaneous": false,
+        "id": "01219111"
+      }
+    ],
+    "description": {
+      "th": "กระบวนการพัฒนาซอฟต์แวร์ การจัดการเวลา การติดตามเวลา ช่วงเวลาในการวางแผนการผลิต การวางแผนการผลิต การจัดการเวลาส่วนบุคคล คำสัญญา และตารางนัดหมาย แผนงานโครงการ การค้นหาข้อผิดพลาด รายการตรวจสอบรหัส การคาดคะเนข้อบกพร่อง เศรษฐศาสตร์ของการกำจัดข้อบกพร่อง ข้อบกพร่องจากการออกแบบ คุณภาพผลิตภัณฑ์และกระบวนการ คำสัญญาเชิงบุคคลที่มีต่อคุณภาพ",
+      "en": "Software development process, time management, tracking time, period and production planning, managing personal time, commitments and schedules, project plan, finding defects, code review checklist, projecting defects, economics of defect removal, design defects, product quality, process and personal commitment to quality."
+    },
+    "id": "01219245"
+  },
+  "01219449": {
+    "name": {
+      "th": "แบบรูปและสถาปัตยกรรมซอฟต์แวร์",
+      "en": "Software Patterns and Architecture"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "กระบวนการสถาปัตยกรรมซอฟต์แวร์ ลักษณะประจำเชิงคุณภาพของซอฟต์แวร์ การเขียนเอกสารสถาปัตยกรรมซอฟต์แวร์ สถาปัตยกรรมที่ขับเคลื่อนด้วยแบบจำลอง สถาปัตยกรรมเชิงการบริการแบบรูปการออกแบบเชิงสถาปัตยกรรม แบบรูปสำหรับวัตถุแบบเครือข่ายที่ทำงานจวบกัน แบบรูปสำหรับระบบองค์ แบบรูปสำหรับระบบอิง อินเทอร์เน็ต",
+      "en": "Software architecture process, software quality attributes, software architecture documentation, model-driven architecture, service-oriented architecture, architectural design patterns, concurrent and networked object patterns, enterprise system patterns, internet-based system patterns."
+    },
+    "id": "01219449"
+  },
+  "01219381": {
+    "name": {
+      "th": "วิศวกรรมข้อมูลสื่อประสม",
+      "en": "Multimedia Data Engineering"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "เทคโนโลยีระบบสื่อประสม รูปแบบและมาตรฐานข้อมูล มาตรฐานการบีบอัด เทคโนโลยีนำเข้า/ส่งออกและเทคโนโลยีหน่วยเก็บข้อมูล ส่วนต่อประสานกับผู้ใช้ ฐานข้อมูลสื่อประสม การสื่อสารสื่อประสม และระบบสื่อประสมแบบกระจาย",
+      "en": "Multimedia systems technology, data formats and standards, compression standards, input/output and storage technologies, user interface, multimedia database, multimedia communications, and distributed multimedia systems."
+    },
+    "id": "01219381"
+  },
+  "01219498": {
+    "name": {
+      "th": "ปัญหาพิเศษ",
+      "en": "Special Problems"
+    },
+    "credit": {
+      "total": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "การศึกษาค้นคว้าทางวิศวกรรมซอฟต์แวร์และความรู้ระดับปริญญาตรี และเรียบเรียงเขียนเป็นรายงาน",
+      "en": "Study and research in software and knowledge engineering at the bachelor’s degree level and compile into a report."
+    },
+    "id": "01219498"
+  },
+  "01219113": {
+    "name": {
+      "th": "การโปรแกรมเชิงวัตถุ II",
+      "en": "Object-Oriented Programming II"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 3,
+      "total": 3,
+      "lecture": 2
+    },
+    "prereq": [
+      {
+        "simultaneous": true,
+        "id": "01219111"
+      }
+    ],
+    "description": {
+      "th": "สร้างและออกแบบชนิดของข้อมูล การเรียกเมท็อดแบบพลวัตร การทำเอนแคปซูเลชั่น การทำอินเฮอริแตนท์ การทำชนิดข้อมูลให้เป็นได้หลายรูปแบบ อินเตอร์เฟส การจัดการกับสภาวะยกเว้น เจเนริค รีเฟลคชั่น",
+      "en": "Create and design data types; dynamic method invocation; encapsulation; inheritance; polymorphism; interfaces; exception handling; generics; reflections."
+    },
+    "id": "01219113"
+  },
+  "01219213": {
+    "name": {
+      "th": "ทักษะการสื่อสารสำหรับวิศวกรซอฟต์แวร์และความรู้",
+      "en": "Communication Skills for Software and Knowledge Engineers"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "แนวคิดหลักของการสื่อสาร การสื่อสารภายในกลุ่มงาน การสื่อสารกับลูกค้า การจัดการและดำเนินการประชุมกับฝ่ายธุรกิจ การประชุมเพื่อวางแผน การประชุมแจ้งสถานะ และการประชุมเพื่อทบทวน การฝึกปฏิบัติการในสถานการณ์ต่าง ๆ ที่เกี่ยวข้องกับรายวิชา",
+      "en": "Principle concepts of communication; communication within the teams; communication with customers; meeting management and handling for various types of meetings, business meetings, planning meetings, status meetings, and retrospective meetings; practices in various situations related to topics in the course."
+    },
+    "id": "01219213"
+  },
+  "01219361": {
+    "name": {
+      "th": "อัจฉริยะเชิงธุรกิจ",
+      "en": "Business Intelligence"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [
+      {
+        "simultaneous": false,
+        "id": "01204351"
+      }
+    ],
+    "description": {
+      "th": "ระบบสนับสนุนการจัดการ กระบวนการตัดสินใจ สถาปัตยกรรมและส่วนประกอบของระบบอัจฉริยะเชิงธุรกิจ การคลังข้อมูล ระเบียบวิธีพัฒนาคลังข้อมูล การประยุกต์ใช้การคลังข้อมูลสำหรับระบบอัจฉริยะเชิงธุรกิจ กระบวนการค้นพบความรู้ เทคนิคการทำเหมืองข้อมูล การประยุกต์ใช้เทคนิคการทำเหมืองข้อมูลสำหรับระบบอัจฉริยะเชิงธุรกิจ",
+      "en": "Management support systems; decision making process; architectures and elements of business intelligence; data warehousing; data warehouse development methodology; application of data warehousing for business intelligence; knowledge discovery; data mining technique; application of data mining for business intelligence."
+    },
+    "id": "01219361"
+  },
+  "01219373": {
+    "name": {
+      "th": "การจัดการนวัตกรรม",
+      "en": "Innovation Management"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "นิยามและชนิดของนวัตกรรมเชิงเทคโนโลยี ลักษณะและการจัดการนวัตกรรม การเปลี่ยนกระบวนทัศน์ทางทฤษฎีนวัตกรรมและแบบจำลองกระบวนการ การทำงานผิดพลาดในการจัดการนวัตกรรม เงื่อนไขเชิงกลยุทธ์และเงื่อนไขปฏิบัติการในการก่อให้เกิดนวัตกรรม พลวัตของการเชื่อมโยงกลยุทธ์ของนวัตกรรมไปยังวงจรเทคโนโลยีและการจัดการกระแสนวัตกรรม การนำกลยุทธ์นวัตกรรมไปใช้โดยการปรับกระบวนการธุรกิจ การจัดการความรู้ในองค์กรและการกระตุ้นความคิดสร้างสรรค์ของมนุษย์ เครือข่ายนวัตกรรมและพันธมิตรเทคโนโลยีเชิงกลยุทธ์ การวัดเปรียบเทียบสมรรถนะประสิทธิภาพของนวัตกรรม",
+      "en": "Definition and types of technological innovation, characteristics and innovation management, paradigm shifts in innovation theory and process models, malfunctions in managing an innovation process, strategic and operative conditions facilitating innovation, dynamics of linking innovation strategies to technology cycles and managing innovation streams, implementing innovation strategies through business process redesign, managing knowledge in the organization and motivating human creativity, innovation networks and strategic technology alliances, benchmarking innovation efficiency."
+    },
+    "id": "01219373"
+  },
+  "01219212": {
+    "name": {
+      "th": "ปฏิบัติการชนิดข้อมูลนามธรรม",
+      "en": "Abstract Data Types Laboratory"
+    },
+    "credit": {
+      "self": 2,
+      "lab": 3,
+      "total": 1,
+      "lecture": 0
+    },
+    "prereq": [
+      {
+        "simultaneous": true,
+        "id": "01204212"
+      }
+    ],
+    "description": {
+      "th": "ปฏิบัติการสำหรับวิชา 01204212 ชนิดข้อมูลนามธรรมและการแก้ปัญหา",
+      "en": "Laboratory for 01204212 Abstract Data Types and Problem Solving."
+    },
+    "id": "01219212"
+  },
+  "01219333": {
+    "name": {
+      "th": "การทำเหมืองข้อมูลเบื้องต้น",
+      "en": "Introduction to Data Mining"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "แนวคิดพื้นฐานของการทำเหมืองข้อมูล การประยุกต์การทำเหมืองข้อมูล เทคนิคและแบบจำลอง ประเด็นด้านจริยธรรมและความเป็นส่วนตัว ชุดซอฟต์แวร์เหมืองข้อมูล วิธีการทำเหมืองข้อมูล ตารางการตัดสินใจ ต้นไม้การตัดสินใจ กฎการจำแนก การเข้ากลุ่ม การสร้างแบบจำลองเชิงสถิติและแบบจำลองเชิงเส้น",
+      "en": "Basic concepts of data mining, data mining applications, techniques and models, ethics and privacy issues, data mining software suite, data mining methodologies, decision tables, decision trees, classification rules, clustering, statistical modeling, and linear models."
+    },
+    "id": "01219333"
+  },
+  "01219332": {
+    "name": {
+      "th": "คลังข้อมูล",
+      "en": "Data Warehouse"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "พื้นฐานของการสร้างคลังข้อมูล การวางแผนโครงการ การนิยามข้อกำหนดของธุรกิจ การสร้างแบบจำลองมีมิติ สถาปัตยกรรมเชิงเทคนิค ทางเลือกของกโครงแบบเชิงกายภาพ การเลือกโครงการ การออกแบบฐานข้อมูลกายภาพ การประมวลจัดขั้นตอนข้อมูล เทคนิคการจัดขั้นตอนข้อมูล งานประยุกต์สำหรับผู้ใช้เป้าหมาย การใช้คลังข้อมูล การจัดการการเติบโตของระบบ",
+      "en": "Fundamentals of data warehousing, project planning, business requirement definition, dimensional modeling, technical architecture, physical configuration options, project selection, physical database design, data staging process, data staging techniques, target user applications, deployment of data warehouse, system growth management."
+    },
+    "id": "01219332"
+  },
+  "01219412": {
+    "name": {
+      "th": "การเขียนเชิงเทคนิคสำหรับวิศวกรซอฟต์แวร์และความรู้",
+      "en": "Technical Writing for Software and Knowledge Engineers"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "เอกสารสำหรับผู้ใช้ เอกสารการออกแบบ เอกสารความต้องการของโครงการ แผนการดำเนินงานของโครงการ เอกสารรายงานความคืบหน้า รายงานเชิงเทคนิค",
+      "en": "User documents; design documents; project requirements; project plans; project progress reports; technical reports."
+    },
+    "id": "01219412"
+  },
+  "01219215": {
+    "name": {
+      "th": "ปฏิบัติการระบบคอมพิวเตอร์",
+      "en": "Computer System Laboratory"
+    },
+    "credit": {
+      "self": 2,
+      "lab": 3,
+      "total": 1,
+      "lecture": 0
+    },
+    "prereq": [
+      {
+        "simultaneous": true,
+        "id": "01219216"
+      }
+    ],
+    "description": {
+      "th": "การเชื่อมต่อไมโครโปรเซสเซอร์ การโปรแกรมภาษาซีในระดับล่าง ระบบหน่วย ความจำและแคช การวิเคราะห์โปรแกรมในระดับไบนารีโดยใช้ดีบักเกอร์ การโจมตีแบบบัฟเฟอร์โอเวอร์โฟลว์ การเขียนโปรแกรมเชล",
+      "en": "Microprocessor interfacing; low-level C coding; memory systems and cache; binary analysis with debuggers; buffer overflow attacks; coding shell programs."
+    },
+    "id": "01219215"
+  },
+  "01219495": {
+    "name": {
+      "th": "โครงงานรายบุคคลวิศวกรรมซอฟต์แวร์และความรู้",
+      "en": "Software and Knowledge Engineering Individual Project"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "โครงงานรายบุคคลที่น่าสนใจในแขนงต่างๆทางด้านวิศวกรรมซอฟต์แวร์และความรู้",
+      "en": "Individual project on interesting topic in software and knowledge engineering."
+    },
+    "id": "01219495"
+  },
+  "01219482": {
+    "name": {
+      "th": "การนำเสนอแบบสื่อหลายมิติ",
+      "en": "Hypermedia Presentation"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "เทคโนโลยีสื่อหลายมิติ การแสดงผลกราฟิก ภาพเคลื่อนไหว วีดีทัศน์ เสียง จิตวิทยาการรับรู้ เทคนิคการนำเสนอข้อมูลแบบสื่อประสม การเชื่อมโยงสื่อหลายมิติ การออกแบบการนำเสนอ สื่อโฆษณา สื่อประชาสัมพันธ์ การนำเสนอสื่อหลายมิติบนเว็บและอินเทอร์เน็ต",
+      "en": "Hypermedia technology, graphic presentation, animation, video image, audio, perception psychology, multimedia presentation techniques, hypermedia-linked information, presentation design, advertisement, public announcement, hypermedia presentation on the web and Internet."
+    },
+    "id": "01219482"
+  },
+  "01219214": {
+    "name": {
+      "th": "ความน่าจะเป็นและสถิติสำหรับวิศวกรซอฟต์แวร์และความรู้",
+      "en": "Probability and Statistics for Software and Knowledge Engineers"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "ความน่าจะเป็น ความน่าจะเป็นแบบมีเงื่อนไขและแบบอิสระกันของเหตุการณ์ตัวแปรสุ่ม การแจกแจงและฟังก์ชันความหนาแน่น ฟังก์ชันของตัวแปรสุ่มตัวเดียว ตัวแปรสุ่มหลายตัว การอนุมานเชิงสถิติ การประมาณ การทดสอบสมมุติฐาน การถดถอย การประยุกต์กับปัญหาด้านวิศวกรรมซอฟต์แวร์และความรู้",
+      "en": "Probability; conditional probability and independence of events; random variables; distribution and density functions; functions of one random variable; multiple random variables; statistical inference; estimation; hypothesis testing; regression; application to software and knowledge engineering problems."
+    },
+    "id": "01219214"
+  },
+  "01219492": {
+    "name": {
+      "th": "การเป็นผู้ประกอบการซอฟต์แวร์",
+      "en": "Software Entrepreneurship"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "บทนำและกรณีศึกษา การพัฒนาแบบจำลองทางธุรกิจ การวางแผนเชิงกลยุทธ์ การจัดการทรัพยากรทุน การจัดการความเสี่ยง การบัญชีเบื้องต้น กระบวนการและข้อกฎหมายในการจัดตั้งบริษัท การฝึกปฏิบัติเกี่ยวกับเนื้อหาในวิชา",
+      "en": "Introduction and case studies. Business model development. Strategic planning. Financial resource management. Risk management. Basic accounting. Procedures and laws for establishing a company. Practice with materials in the course."
+    },
+    "id": "01219492"
+  },
+  "01219244": {
+    "name": {
+      "th": "ปฏิบัติการข้อกำหนดและการออกแบบซอฟต์แวร์",
+      "en": "Software Specification and Design Laboratory"
+    },
+    "credit": {
+      "self": 2,
+      "lab": 3,
+      "total": 1,
+      "lecture": 0
+    },
+    "prereq": [
+      {
+        "simultaneous": true,
+        "id": "01219243"
+      }
+    ],
+    "description": {
+      "th": "ปฏิบัติการสำหรับวิชา 01219243 ข้อกำหนดและการออกแบบซอฟต์แวร์",
+      "en": "Laboratory for 01219243 Software Specification and Design."
+    },
+    "id": "01219244"
+  },
+  "01219451": {
+    "name": {
+      "th": "เทคโนโลยีการบริการเว็บ",
+      "en": "Web Services Technology"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "ปัญหาในการวิเคราะห์และออกแบบโปรแกรมประยุกต์เว็บตั้งแต่ขนาดเล็กจนถึงขนาดใหญ่ งานประยุกต์ระดับองค์กร โปรแกรมประยุกต์ที่กระจายในอินทราเน็ต เอกซ์ทราเน็ต และอินเทอร์เน็ต มาตรฐานโพรโทคอลและมาตรฐานส่วนต่อประสานสำหรับเว็บ ความมั่นคงของเว็บ ระเบียบวิธีเชิงวิศวกรรมของเว็บ สถาปัตยกรรมและส่วนประกอบของเว็บ โครงสร้างพื้นฐานของพาณิชย์อิเล็กทรอนิกส์ การบูรณาการระหว่างเว็บและฐานข้อมูล มาตรฐานและเทคโนโลยีการบริการเว็บ การพัฒนางานประยุกต์เชิงเว็บ",
+      "en": "Problems in analyzing and designing web applications from small-scale to large-scale; enterprise applications; applications distributed across corporate intranets, extranets, and internet; web standard protocols and interfaces; web security; web engineering methodology; web architectures and web components; electronic-commerce infrastructures; database and web integration; web services standards and technologies; web-based application development."
+    },
+    "id": "01219451"
+  },
+  "01219491": {
+    "name": {
+      "th": "ระเบียบวิธีวิจัยเบื้องต้นทางวิศวกรรมซอฟต์แวร์และความรู้",
+      "en": "Introduction to Research Methods in Software and Knowledge Engineering"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "งานวิจัยทางวิศวกรรมซอฟต์แวร์และความรู้ ลักษณะเฉพาะของการวิจัยทางวิศวกรรมซอฟต์แวร์และความรู้ การจัดทำโครงร่างการวิจัย การรวบรวมและการค้นคืนข้อมูล เครื่องมือในการทดลองทางวิศวกรรมซอฟต์แวร์และความรู้ การวิเคราะห์ข้อมูล การเขียนรายงานวิชาการ",
+      "en": "Research in software and knowledge engineering, characteristics of software and knowledge engineering research, research proposal preparation, data gathering and information retrieval, experiment tools in software and knowledge engineering, data analysis, technical report writing."
+    },
+    "id": "01219491"
+  },
+  "01219271": {
+    "name": {
+      "th": "วิศวกรรมความรู้และการจัดการความรู้",
+      "en": "Knowledge Engineering and Knowledge Management"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [
+      {
+        "simultaneous": false,
+        "id": "01204351"
+      }
+    ],
+    "description": {
+      "th": "ลักษณะเฉพาะของความรู้ แนวคิดและกระบวนการเก็บเกี่ยวความรู้ แหล่งความรู้ สถาปัตยกรรมของระบบอิงความรู้ เครื่องมือสำหรับวิศวกรรมความรู้ การเรียนรู้และสมรรถนะในเศรษฐกิจความรู้ วัฏจักรของความรู้ ความหลากหลายของงานด้านความรู้ โอกาสในการจัดการความรู้ในองค์กรขนาดใหญ่ กลศาสตร์การจัดการความรู้ ความสัมพันธ์ระหว่างวัฒนธรรมองค์กรกับการจัดการความรู้",
+      "en": "Knowledge characteristics, concept, and process of knowledge acquisition, knowledge sources architecture of knowledge-based system, knowledge engineering tools, learning and performance in the knowledge economy, knowledge cycle, varieties of knowledge work, knowledge management opportunities in large enterprise, mechanics of knowledge management, relations between organizational culture and knowledge management."
+    },
+    "id": "01219271"
+  },
+  "01219351": {
+    "name": {
+      "th": "การพัฒนาซอฟต์แวร์ประยุกต์บนเว็บ",
+      "en": "Web Application Development"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [
+      {
+        "simultaneous": false,
+        "id": "01219113"
+      }
+    ],
+    "description": {
+      "th": "มโนทัศน์พื้นฐานของสถาปัตยกรรมเว็บและโปโตคอลเฮชทีทีพี  สถาปัตยกรรมของโปรแกรมประยุกต์บนเว็บ การออกแบบโปรแกรมประยุกต์บนเว็บ การทดสอบโปรแกรมประยุกต์บนเว็บ ความปลอดภัยของโปรแกรมประยุกต์บนเว็บ การขยายโปรแกรมประยุกต์บนเว็บ การบริการบนเว็บเบื้องต้น การพัฒนาโปรแกรมประยุกต์บนเว็บบนเทคโนโลยีกลุ่มเมฆ ฝึกปฏิบัติการการพัฒนาโปรแกรมประยุกต์บนเว็บโดยมีผู้ใช้งานเป้าหมายจริง",
+      "en": "Basic concepts of web architecture and the HTTP protocol; architecture of web applications; designing web applications; testing web applications; web application security; scaling web applications; introduction to web services; web application development on cloud technology; practice in developing web application with real target users."
+    },
+    "id": "01219351"
+  },
+  "01219321": {
+    "name": {
+      "th": "การสื่อสารข้อมูลและการโปรแกรมคอมพิวเตอร์เครือข่าย",
+      "en": "Data Communication and Computers Networks Programming"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "เครือข่ายการสื่อสารข้อมูล การส่งข้อมูล การควบคุมเส้นทางเชื่อมโยงข้อมูล เครือข่ายคอมพิวเตอร์เฉพาะที่และบริเวณกว้าง สถาปัตยกรรมการสื่อสารและโพรโตคอล การเชื่อมโยงระหว่างงานประยุกต์ในเครือข่าย การโปรแกรมเชิงบริการ",
+      "en": "Data communication network; data transmission; data link controls; local area network and wide area network; communication architecture and protocols; service-oriented programming."
+    },
+    "id": "01219321"
+  },
+  "01219391": {
+    "name": {
+      "th": "พลวัติเชิงกลุ่มและจิตวิทยา",
+      "en": "Group Dynamics and Psychology"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 3,
+      "total": 3,
+      "lecture": 2
+    },
+    "prereq": [],
+    "description": {
+      "th": "พฤติกรรมของบุคคล การรู้คิดในระดับปัจเจก ความซับซ้อนของปัญหาในเชิงการรู้คิด พลวัติของการทำงานเป็นกลุ่ม การจูงใจ ภาวะผู้นำ การบริหารความขัดแย้ง การปฏิสัมพันธ์กับผู้มีส่วนได้เสีย ความไม่แน่นอนและความกำกวมในการพัฒนาซอฟต์แวร์ การจัดการกับความไม่แน่นอนและความกำกวม การฝึกปฏิบัติการในสถานการณ์ต่าง ๆ ที่เกี่ยวข้องกับรายวิชา",
+      "en": "Individual behavior; individual cognition; cognitive problem complexity; team dynamics; motivation; leadership; conflict management; interacting with stakeholders; uncertainty and ambiguity in software development; dealing with uncertainty and ambiguity; practices in various situations related to topics in the course."
+    },
+    "id": "01219391"
+  },
+  "01219348": {
+    "name": {
+      "th": "ปฏิบัติการกระบวนการพัฒนาซอฟต์แวร์เชิงกลุ่มงาน",
+      "en": "Workgroup Software Development Process Laboratory"
+    },
+    "credit": {
+      "self": 2,
+      "lab": 3,
+      "total": 1,
+      "lecture": 0
+    },
+    "prereq": [
+      {
+        "simultaneous": true,
+        "id": "01219347"
+      }
+    ],
+    "description": {
+      "th": "ปฏิบัติการสำหรับวิชา 01219347 กระบวนการพัฒนาซอฟต์แวร์เชิงกลุ่มงาน",
+      "en": "Laboratory for 01219347 Workgroup Software Development Process."
+    },
+    "id": "01219348"
+  },
+  "01219322": {
+    "name": {
+      "th": "วิศวกรรมพาณิชย์อิเล็กทรอนิกส์",
+      "en": "Electronic Commerce Engineering"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "เทคโนโลยีพาณิชย์อิเล็กทรอนิกส์ การพัฒนาและสร้างระบบพาณิชย์อิเล็กทรอนิกส์ เทคโนโลยีเครือข่ายและทิศทางในอนาคต เทคโนโลยีฐานข้อมูล การเชื่อมต่อระหว่างเว็บและฐานข้อมูล ประเด็นด้านความมั่นคง ระบบจ่ายเงินอิเล็กทรอนิกส์ ข่าวกรองทางธุรกิจ การจัดการความเชื่อถือ ตัวแทนการค้า ความเป็นส่วนตัว ผลิตภัณฑ์ทางสารสนเทศและการป้องกันการลอกเลียน ความไม่เท่าเทียมเชิงดิจิทัล",
+      "en": "Electronic commerce technology, Electronic commerce system development and implementation, networking technologies and their future directions, database technologies, database-web connectivity, security-related issues, electronic payment systems, business intelligence, trust management, trading agents, privacy, information products and copy protection, digital devide."
+    },
+    "id": "01219322"
+  },
+  "01219371": {
+    "name": {
+      "th": "เทคโนโลยีสารสนเทศสำหรับการจัดการความรู้",
+      "en": "Information Technology for Managing Knowledge"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "ระบบการประมวลผลสารสนเทศแบบดั้งเดิม การพัฒนาระบบสารสนเทศ ระบบสารสนเทศเพื่อการจัดการและเทคโนโลยีสารสนเทศเพื่อการจัดการความรู้ เทคโนโลยี   สารสนเทศเพื่อการพัฒนาความรู้ เทคโนโลยีสารสนเทศ เพื่อการจัดเก็บความรู้ โปรแกรมสืบค้น ขั้นตอนวิธีและระเบียบวิธีในการสืบค้น การแทนความรู้ ปัญญาประดิษฐ์และการจัดการความรู้ งานประยุกต์ในการจัดการความรู้",
+      "en": "Traditional information processing systems; the development of information systems; management information systems and information technology for knowledge management; information technology for knowledge development; information technology for knowledge storage; search engines; searching algorithms and methodologies; knowledge representation; artificial intelligence and knowledge management; knowledge management applications."
+    },
+    "id": "01219371"
+  },
+  "01219343": {
+    "name": {
+      "th": "การทดสอบซอฟต์แวร์",
+      "en": "Software Testing"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [
+      {
+        "simultaneous": false,
+        "id": "01219243"
+      }
+    ],
+    "description": {
+      "th": "มโนทัศน์พื้นฐานเกี่ยวกับการทดสอบซอฟต์แวร์ กระบวนการและแบบจำลองสำหรับการทดสอบซอฟต์แวร์ การทดสอบที่ระดับชิ้นส่วน การทดสอบการเชื่อมต่อ การทดสอบระบบ และการทดสอบการยอมรับของผู้ใช้ การทดสอบเชิงไม่เป็นฟังก์ชั่น เทคนิคการทบทวน การวิเคราะห์ซอฟต์แวร์เชิงสถิตย์ การวางแผน การประมาณ การดูแลและควบคุม การทดสอบซอฟต์แวร์ เครื่องมือในการทดสอบ",
+      "en": "Basic concepts of software testing. Processes and models of software testing. Component testing, integration testing, system testing, and acceptance testing. Non-functional testing. Review techniques. Static software analysis. Test Planning, estimation, monitoring, and control. Test tools."
+    },
+    "id": "01219343"
+  },
+  "01219216": {
+    "name": {
+      "th": "ระบบปฏิบัติการสำหรับวิศวกรซอฟต์แวร์และความรู้",
+      "en": "Operating Systems for Software and Knowledge Engineers"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [
+      {
+        "simultaneous": false,
+        "id": "01219111"
+      }
+    ],
+    "description": {
+      "th": "แนวคิดพื้นฐานของการต่อประสานซอฟต์แวร์ขนาดใหญ่กับระบบปฏิบัติการการต่อประสานระหว่างซอฟต์แวร์และฮาร์ดแวร์ การจัดการและการจัดกำหนดการกระบวนการ การจัดการรับเข้า/ส่งออก การจัดการหน่วยความจำระบบแฟ้ม ความมั่นคงของระบบคอมพิวเตอร์",
+      "en": "Basic concepts of interfacing between large-scale software and operating systems, software and hardware interfacing, process management and scheduling, input/output management, memory management, file systems, computer system security."
+    },
+    "id": "01219216"
+  },
+  "01219363": {
+    "name": {
+      "th": "การแทนความรู้",
+      "en": "Knowledge Representation"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "การแทนความรู้และการหาเหตุผล หลักการพื้นฐานในการแทนความรู้ ข้อได้เปรียบและข้อจำกัดของระบบฐานความรู้แบบกฎเกณฑ์ แบบเฟรมและแบบตรรกศาสตร์ การคำนวณเชิงเพรดิเคต โครงข่ายความหมาย การแทนความรู้โดยใช้ภววิทยา การแทนความรู้แบบคลุมเครือ",
+      "en": "Knowledge representation and its reasoning tasks, basic principles of knowledge representation, advantage and limitations of rule-based systems, frame-based systems and logic-based systems; predicate calculus; semantic networks; ontology of knowledge representation; fuzzy representation."
+    },
+    "id": "01219363"
+  },
+  "01219362": {
+    "name": {
+      "th": "การเรียนรู้ของเครื่องจักร",
+      "en": "Machine Learning"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "เทคนิคและขั้นตอนวิธีเพื่อการเรียนรู้ของเครื่องจักร กระบวนการเชิงอุปนัยของต้นไม้การตัดสินใจ แนวทางการเรียนรู้แบบเบย์เซียนเชิงพารามิเตอร์ แบบจำลองมาร์คอฟแบบซ่อน วิธีการแบบไม่มีพารามิเตอร์ ฟังก์ชันการแยกแยะ เครือข่ายประสาทเทียม วิธีการเชิงสุ่ม ขั้นตอนวิธีเชิงพันธุศาสตร์ การเรียนรู้แบบไม่มีต้นแบบ การแบ่งกลุ่มข้อมูล",
+      "en": "Techniques and algorithms underlying machine learning, inductive process of decision trees, parametric-based Bayesian learning approach, hidden Markov models, non-parametric methods, discriminant functions, neural networks, stochastic methods, genetic algorithms, unsupervised learning, data clustering."
+    },
+    "id": "01219362"
+  },
+  "01219497": {
+    "name": {
+      "th": "สัมมนา",
+      "en": "Seminar"
+    },
+    "credit": {
+      "total": 1
+    },
+    "prereq": [],
+    "description": {
+      "th": "การนำเสนอและอภิปรายในหัวข้อที่น่าสนใจทางวิศวกรรมซอฟต์แวร์และความรู้ในระดับปริญญาตรี",
+      "en": "Presentation and discussion on interesting topics in software and knowledge engineering at the bachelor’s degree level."
+    },
+    "id": "01219497"
+  },
+  "01219221": {
+    "name": {
+      "th": "องค์กรและสถาปัตยกรรมคอมพิวเตอร์",
+      "en": "Computer Organization and Architecture"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "องค์กรและสถาปัตยกรรมคอมพิวเตอร์เบื้องต้น เรจิสเตอร์ หน่วยคำนวณและตรรกะ หน่วยควบคุม การแทนข้อมูลและคำสั่งในเครื่อง ภาษาเครื่อง ภาษาแอสเซมบลี ระบบรับเข้า/ส่งออก วิวัฒนาการคอมพิวเตอร์ สถาปัตยกรรมซีพียู ชุดคำสั่ง การออกแบบเอแอลยู การควบคุมแบบฮาร์ดไวร์และโปรแกรมจุลภาค ลำดับชั้นของหน่วยความจำ หน่วยความจำเสมือน หน่วยความจำแคช",
+      "en": "Basic computer organization and architecture, registers, arithmetic-logic unit, control unit, machine representation of data and instructions, machine language, assembly language, input/output system, computer evolution, CPU architecture, instruction sets, ALU design, hardwired and micro programmed control, memory hierarchies, virtual memory, cache memory."
+    },
+    "id": "01219221"
+  },
+  "01219334": {
+    "name": {
+      "th": "การประมวลผลรายการเปลี่ยนแปลง",
+      "en": "Transaction Processing"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "รายการเปลี่ยนแปลงและสมบัติ ผู้จัดการทรัพยากรและผู้จัดการรายการเปลี่ยนแปลง แบบจำลองการประมวลผลด้วยรายการเปลี่ยนแปลง ประโยชน์ของการสื่อสารแบบรายการเปลี่ยนแปลงกับระบบอื่น งานประยุกต์ที่ใช้การประมวลผลรายการผ่านเว็บ การเฝ้าสังเกตการประมวลผลด้วยรายการ รายการเปลี่ยนแปลงการจ่ายเงินอิเล็กทรอนิกส์ งานประยุกต์ฝั่งเครื่องบริการ การบริการรายการเปลี่ยนแปลง เครื่องบริการรายการเปลี่ยนแปลงที่มีใช้ในปัจจุบัน",
+      "en": "Transactions and their properties, resource managers and transaction managers, transaction processing models, benefits of using transactional versus non-transactional communications, applications that process transactions via the Web, transaction processing monitor, electronic payment transaction, server side applications, transaction services, currently deployed transaction servers."
+    },
+    "id": "01219334"
+  },
+  "01219364": {
+    "name": {
+      "th": "การค้นพบความรู้",
+      "en": "Knowledge Discovery"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [
+      {
+        "simultaneous": false,
+        "id": "01219271"
+      }
+    ],
+    "description": {
+      "th": "หลักการของการค้นพบความรู้ การค้นพบความรู้โดยอัตโนมัติ การหาเหตุผลเชิงเหนี่ยวนำ กระบวนการค้นพบความรู้ ขั้นตอนวิธีและเครื่องมือการทำเหมืองความรู้",
+      "en": "Principles of knowledge discovery, automated scientific discovery, inductive reasoning, knowledge discovery processes, knowledge mining algorithms and tools."
+    },
+    "id": "01219364"
+  },
+  "01219496": {
+    "name": {
+      "th": "เรื่องเฉพาะทางวิศวกรรมซอฟต์แวร์และความรู้",
+      "en": "Selected Topics in Software and Knowledge Engineering"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "เรื่องเฉพาะทางวิศวกรรมซอฟต์แวร์และความรู้ในระดับปริญญาตรี หัวข้อเรื่องเปลี่ยนแปลงไปในแต่ละภาคการศึกษา",
+      "en": "Selected topics in software and knowledge engineering at the bachelor’s degree level, topics are subject to change each semester."
+    },
+    "id": "01219496"
+  },
+  "01219499": {
+    "name": {
+      "th": "โครงงานกลุ่มนวัตกรรมซอฟต์แวร์",
+      "en": "Innovative Software Group Project"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 3,
+      "total": 3,
+      "lecture": 2
+    },
+    "prereq": [
+      {
+        "simultaneous": false,
+        "id": "01219490"
+      }
+    ],
+    "description": {
+      "th": "โครงงานกลุ่มระยะยาวในการสร้างและพัฒนาเครื่องมือนวัตกรรมในงานด้านวิศวกรรมซอฟต์แวร์และความรู้",
+      "en": "Long-term workgroup project on production and development of innovative tools for software and knowledge engineering."
+    },
+    "id": "01219499"
+  },
+  "01219481": {
+    "name": {
+      "th": "การวิเคราะห์เนื้อหาสื่อประสม",
+      "en": "Multimedia Content Analysis"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "แนวคิดพื้นฐานทฤษฎีและขั้นตอนวิธีสำหรับการรู้จำแบบรูปของข้อมูลสื่อประสม การรับรู้ภาพคอมพิวเตอร์ การประมวลผลสัญญาณ การรู้จำเสียงพูด การสกัดเนื้อหาของสื่อประสม ทฤษฎีการตัดสินใจของเบย์ การเรียนรู้แบบมีพารามิเตอร์และแบบไม่มีพารามิเตอร์ การลดมิติ ลักษณะเฉพาะของเนื้อหาที่สำคัญของข้อมูลสื่อประสม",
+      "en": "Fundamental concepts, theories and algorithms for pattern recognition of multimedia data, computer vision, signal processing, speech recognition, multimedia feature extraction, Bayes decision theory, parametric and non-parametric learning, dimension reduction, characteristics of important contents of multimedia data."
+    },
+    "id": "01219481"
+  },
+  "01219211": {
+    "name": {
+      "th": "ค่ายฝึกพัฒนาซอฟต์แวร์",
+      "en": "Software Development Training Camp"
+    },
+    "credit": {
+      "self": 2,
+      "lab": 3,
+      "total": 1,
+      "lecture": 0
+    },
+    "prereq": [],
+    "description": {
+      "th": "ค่ายเพิ่มพูนทักษะการพัฒนาโปรแกรมไม่ต่ำกว่า 48 ชั่วโมง",
+      "en": "Program development skill enhancement camp, at least 48 person-hours."
+    },
+    "id": "01219211"
+  },
+  "01219411": {
+    "name": {
+      "th": "ความมั่นคงของระบบคอมพิวเตอร์",
+      "en": "Computer Systems Security"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "การรักษาความมั่นคงของระบบคอมพิวเตอร์ การควบคุมการเข้าถึง การพิสูจน์ตัวจริง ระดับสิทธิ์ วิทยาการเข้ารหัสลับ ความปลอดภัยของระบบ การสำรองข้อมูลและการกู้ระบบ นโยบายด้านความมั่นคง",
+      "en": "Computer security, as access control, authentication, authorization, cryptography, system safety, system backup and recovery, security policies."
+    },
+    "id": "01219411"
+  },
+  "01219111": {
+    "name": {
+      "th": "การโปรแกรมเชิงวัตถุ I",
+      "en": "Object-Oriented Programming I"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 3,
+      "total": 3,
+      "lecture": 2
+    },
+    "prereq": [],
+    "description": {
+      "th": "การทำงานของโปรแกรมบนเครื่องคอมพิวเตอร์ พื้นฐานของภาษาเชิงวัตถุและระบบแวดล้อม ชนิดของข้อมูล การกำหนดค่าปริมาณข้อมูล เงื่อนไขและลูป ข้อมูลแบบแถวลำดับ อินพุทและเอาท์พุท ฟังก์ชั่น การเปรียบเทียบแบบแผนเชิงโพรซีดูรอลกับแบบแผนเชิงวัตถุ",
+      "en": "Program execution on a computer; basic object-oriented language and environments; data types; assignments; conditionals and loops; arrays; input and outputs; functions; comparison of procedural and object-oriented paradigms."
+    },
+    "id": "01219111"
+  },
+  "01219448": {
+    "name": {
+      "th": "ปฏิบัติการแบบรูปและสถาปัตยกรรมซอฟต์แวร์",
+      "en": "Software Patterns and Architecture Laboratory"
+    },
+    "credit": {
+      "self": 2,
+      "lab": 3,
+      "total": 1,
+      "lecture": 0
+    },
+    "prereq": [
+      {
+        "simultaneous": true,
+        "id": "01219449"
+      }
+    ],
+    "description": {
+      "th": "ปฏิบัติการสำหรับวิชา 01219449 แบบรูปและสถาปัตยกรรมซอฟต์แวร์",
+      "en": "Laboratory for 01219449 Software Patterns and Architecture."
+    },
+    "id": "01219448"
+  },
+  "01219246": {
+    "name": {
+      "th": "ปฏิบัติการกระบวนการพัฒนาซอฟต์แวร์เชิงบุคคล",
+      "en": "Individual Software Development Process Laboratory"
+    },
+    "credit": {
+      "self": 2,
+      "lab": 3,
+      "total": 1,
+      "lecture": 0
+    },
+    "prereq": [
+      {
+        "simultaneous": true,
+        "id": "01219245"
+      }
+    ],
+    "description": {
+      "th": "ปฏิบัติการสำหรับวิชา 01219245 กระบวนการพัฒนาซอฟต์แวร์เชิงบุคคล",
+      "en": "Laboratory for 01219245 Individual Software Development Process."
+    },
+    "id": "01219246"
+  },
+  "01219344": {
+    "name": {
+      "th": "การพัฒนาซอฟต์แวร์บนอุปกรณ์เคลื่อนที่",
+      "en": "Mobile Software Development"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [
+      {
+        "simultaneous": false,
+        "id": "01219113"
+      }
+    ],
+    "description": {
+      "th": "แพลตฟอร์มของซอฟต์แวร์บนอุปกรณ์เคลื่อนที่ กระบวนการพัฒนาซอฟต์แวร์สำหรับอุปกรณ์เคลื่อนที่ การออกแบบส่วนติดต่อกับผู้ใช้บนอุปกรณ์เคลื่อนที่ การออกแบบและพัฒนาซอฟต์แวร์สำหรับอุปกรณ์เคลื่อนที่ ช่องทางการจัดจำหน่ายซอฟต์แวร์สำหรับอุปกรณ์เคลื่อนที่ การฝึกปฏิบัติการพัฒนาซอฟต์แวร์ประยุกต์สำหรับอุปกรณ์เคลื่อนที่",
+      "en": "Mobile software platforms; mobile software development processes; designing mobile user interface; designing and developing mobile software; mobile software distribution channels; practice in developing mobile applications."
+    },
+    "id": "01219344"
+  },
+  "01219112": {
+    "name": {
+      "th": "เทคโนโลยีสารสนเทศเบื้องต้น",
+      "en": "Introduction to Information Technology"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "สถาปัตยกรรมของคอมพิวเตอร์ การจัดเก็บข้อมูลในระบบคอมพิวเตอร์ ประเภทของซอฟต์แวร์คอมพิวเตอร์ การติดตั้งและใช้งานซอฟต์แวร์ การใช้ซอฟต์แวร์สำหรับสำนักงานทั่วไป เครือข่ายคอมพิวเตอร์ การใช้งานอินเตอร์เน็ตระบบสารสนเทศ และระบบจัดการฐานข้อมูล การดูแลบำรุงรักษาคอมพิวเตอร์เบื้องต้น การประยุกต์ใช้งานคอมพิวเตอร์ด้านวิศวกรรม",
+      "en": "Computer architecture; data storage in computer system; computer software classification; computer software installation and usage; office software usage; computer network; Internet surfing; information and database management system; basics in computer maintenance; applications of computer in engineering fields."
+    },
+    "id": "01219112"
+  },
+  "01219243": {
+    "name": {
+      "th": "ข้อกำหนดและการออกแบบซอฟต์แวร์",
+      "en": "Software Specification and Design"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [
+      {
+        "simultaneous": false,
+        "id": "01219111"
+      }
+    ],
+    "description": {
+      "th": "การพัฒนาข้อกำหนดซอฟต์แวร์ สถาปัตยกรรมและการออกแบบการวิเคราะห์ซอฟต์แวร์ สถาปัตยกรรมซอฟต์แวร์ แบบรูป การออกแบบ การออกแบบเชิงสถาปัตยกรรมและการออกแบบละเอียด",
+      "en": "Development of software specifications; architecture and designing of software analysis; architecture; design patterns; architecture design and detailed design."
+    },
+    "id": "01219243"
+  },
+  "01219490": {
+    "name": {
+      "th": "สหกิจศึกษา",
+      "en": "Cooperative Education"
+    },
+    "credit": {
+      "total": 9
+    },
+    "prereq": [],
+    "description": {
+      "th": "การปฏิบัติงานในลักษณะพนักงานชั่วคราวตามโครงการที่ได้รับมอบหมาย ตลอดจนการจัดทำรายงานและการนำเสนอ",
+      "en": "On the job training as a temporary according to the assigned project including report and presentation."
+    },
+    "id": "01219490"
+  },
+  "01219347": {
+    "name": {
+      "th": "กระบวนการพัฒนาซอฟต์แวร์เชิงกลุ่มงาน",
+      "en": "Workgroup Software Development Process"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [
+      {
+        "simultaneous": false,
+        "id": "01219245"
+      },
+      {
+        "simultaneous": true,
+        "id": "01219243"
+      }
+    ],
+    "description": {
+      "th": "แนวคิดของกลุ่มงาน ตรรกะของกระบวนการซอฟต์แวร์เชิงกลุ่มงาน กลยุทธ์การพัฒนา แผนการพัฒนา การนิยามความต้องการ การออกแบบ การทำให้เกิดผลและการทดสอบ ระบบโดยกลุ่มงาน บทบาทของผู้นำบทบาทของผู้จัดการพัฒนา ผู้จัดการแผนงาน ผู้จัดการด้านคุณภาพและกระบวนการและผู้จัดการฝ่ายสนับสนุน",
+      "en": "Concept of workgroup, logic of workgroup software process, development strategy, development plan, defining the requirements, role of reader, development manager, design, implementation and system testing by workgroup, Leader role of team development manager role, planning manager role, quality and process manager, and support manager role."
+    },
+    "id": "01219347"
+  },
+  "01219483": {
+    "name": {
+      "th": "ศิลปศาสตร์ดิจิทัล",
+      "en": "Digital Arts"
+    },
+    "credit": {
+      "self": 6,
+      "lab": 0,
+      "total": 3,
+      "lecture": 3
+    },
+    "prereq": [],
+    "description": {
+      "th": "หลักศิลปศาสตร์ดิจิทัลการประยุกต์ในงานจริง การสร้าง เก็บ และการนำเสนอสื่อศิลปะดิจิทัล เทคโนโลยีด้านฮาร์ดแวร์และซอฟต์แวร์ที่เกี่ยวข้อง วิศวกรรมซอฟต์แวร์ในการผลิตสื่อศิลปะดิจิทัล การวิจารณ์งานศิลปะดิจิทัลกรณีศึกษาสำหรับการวาด การถ่ายภาพ การพิมพ์ภาพ การปรับปรุงภาพ การนำเสนอด้วยสื่อประสม เกมวีดีทัศน์",
+      "en": "Principle of digital arts, Applications in real uses, Creation, storage and presentation of digital art media, Related hardware and software technologies, software engineering in digital arts production, Criticism on digital arts, Case study for drawing, photographing, multimedia presentation, video game and others."
+    },
+    "id": "01219483"
+  }
+}

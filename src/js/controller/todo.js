@@ -1,13 +1,13 @@
 angular.module('todoApp', ['ui.router', 'angular-growl'])
-.controller('TodoListController', function ($http, $location, TodoListService, growl, $rootScope) {
+.controller('TodoListController', function ($http, $location, TodoListService, growl, $rootScope, $scope, $window, $anchorScroll) {
   var todoList = this
   todoList.course_list = []
   todoList.my_courses = TodoListService.get()
   todoList.username = ""
   todoList.password = ""
   todoList.isLogin = TodoListService.status_login()
+  todoList.json = {}
   // $rootScope.login = true;
-  console.log($rootScope.login  + "----------")
 
   $http.get('https://whsatku.github.io/skecourses/list.json')
   .success(function(respone){
@@ -39,6 +39,7 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
       .success((function(key){
         return function(respone){
           todoList._course_list[key]['sections'] = respone
+          todoList._course_list[key]['credit_type'] = 'credit'
           // console.log(key)
         }
       })(key))
@@ -47,6 +48,7 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
         // console.error('Repos error', status, data);
       })
     }
+    // console.log(JSON.stringify(todoList._course_list, null, 2))
     // for(var course in todoList.course_list){
     //   course = todoList.course_list[course]
     //   console.log(course)
@@ -80,19 +82,76 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
       // todoList.todoText = ''
       if (TodoListService.login(todoList.username, todoList.password)){
         todoList.isLogin = TodoListService.status_login()
-
+        // growl.success("You have successfully <b>logged in</b>.")
         $location.path("user_information/user_profile")
+      }
+      else{
+        growl.error("Your Username or Password is incorrect.")
       }
     }
 
     todoList.logout = function () {
-        TodoListService.logout()
-        todoList.isLogin = TodoListService.status_login()
-        $location.path("login")
-        // console.log($location.absUrl())
+      TodoListService.logout()
+      todoList.isLogin = TodoListService.status_login()
+      // growl.success("You have successfully <b>logged out</b>.")
+      $location.path("login")
+      // console.log($location.absUrl())
+    }
+
+    todoList.create_json = function(){
+      var data = todoList.my_courses
+      var json = []
+      for (var i=0; i<data.length; i++){
+        console.log(data[i])
+        var _data = {"id":data[i].id, "section":data[i].selected_section, "creditType":todoList._course_list[data[i].id].credit_type}
+        json.push(_data)
+      }
+      json = JSON.stringify(json, undefined, 2);
+      todoList.json = json
+    }
+
+    todoList.save_to_file = function () {
+      data = todoList.json
+      console.log(data)
+      var filename = "enrollment.json"
+      if (!data) {
+        console.error('No data');
+        return;
       }
 
+      if (!filename) {
+        filename = 'download.json';
+      }
 
+      // if (typeof data === 'object') {
+      //   data = JSON.stringify(data, undefined, 2);
+      //   console.log(data)
+      // }
+
+      var blob = new Blob([data], {type: 'text/json'}),
+      e = document.createEvent('MouseEvents'),
+      a = document.createElement('a');
+
+      a.download = filename;
+      a.href = window.URL.createObjectURL(blob);
+      a.dataset.downloadurl = ['text/json', a.download, a.href].join(':');
+      e.initEvent('click', true, false, window,
+      0, 0, 0, 0, 0, false, false, false, false, 0, null);
+      a.dispatchEvent(e);
+    }
+    todoList.gotoSerach = function() {
+      // set the location.hash to the id of
+      // the element you wish to scroll to.
+      $location.hash('courses');
+      console.log(2222)
+
+      // call $anchorScroll()
+      $anchorScroll();
+    }
+    todoList.gotoSerach()
+    // todoList.set_credit_type = function(){
+    //   todoList._course_list[course.id]['credit_type']
+    // }
     todoList.remaining = function () {
       var count = 0
       angular.forEach(todoList.todos, function (todo) {
@@ -198,6 +257,22 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
       $rootScope.login =false
       return $rootScope.login
     }
+  })
+  .directive("scroll", function ($window) {
+    return function(scope, element, attrs) {
+
+      angular.element($window).bind("scroll", function() {
+
+        if (this.pageYOffset >= 600) {
+          scope.boolChangeClass = true;
+          console.log('Scrolled below header.');
+        } else {
+          scope.boolChangeClass = false;
+          console.log('Header is in view.');
+        }
+        scope.$apply();
+      })
+    };
   })
   .config(function (growlProvider) {
     growlProvider.globalTimeToLive(3000);

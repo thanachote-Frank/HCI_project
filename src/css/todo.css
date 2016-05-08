@@ -3,6 +3,23 @@ element {
   --black-color: #1A1A1A;
   --white-color: #FFFFFF;
 }
+body { padding-top: 70px; }
+div[data-ng-view]{
+   height: 150%;
+}
+.cus-nav{
+  margin-top: 70px;
+  box-shadow: 10px 10px 5px #888888;
+}
+.growl-container.growl-fixed.top-right {
+  top: 80px;
+  right: 15px;
+}
+a{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .navbar {
   border-radius: 0px;
 }
@@ -66,7 +83,7 @@ body {
 }
 
 #loginbox {
-    margin-top: 150px;
+    margin-top: 40px;
 }
 
 #loginbox > div:first-child {
@@ -130,6 +147,15 @@ body {
 .margin-top{
     margin-top:50px; /* Don't copy this */
 }
+
+.margin-top-m{
+    margin-top:100px; /* Don't copy this */
+}
+
+.margin-top-x{
+    margin-top:50px; /* Don't copy this */
+}
+
 .stylish-input-group .input-group-addon{
     background: white !important;
 }
@@ -143,6 +169,12 @@ body {
     background:transparent;
 }
 
+.btn.btn_select span.glyphicon {
+	opacity: 0;
+}
+.btn.active.btn_select span.glyphicon {
+	opacity: 1;
+}
 
 .panel.with-nav-tabs .panel-heading{
     padding: 5px 5px 0 5px;

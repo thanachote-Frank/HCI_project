@@ -17,14 +17,16 @@
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bower_components/angular-growl-v2/build/angular-growl.min.js"></script>
 
+
   <!-- App controller -->
   <script src="src/js/controller/todo.js"></script>
   <script src="src/js/route/route.js"></script>
 
+  <a id="courses"></a>
   <!-- some navigation -->
   <div ng-controller="TodoListController as todoList">
-    <nav class="navbar bg-green">
-      <div class="container-fluid col-md-offset-2 col-md-8">
+    <nav class="navbar navbar-fixed-top bg-green">
+      <div class="container-fluid col-md-offset-0 col-md-12 col-lg-10 col-lg-offset-1">
         <div class="navbar-header">
           <div class="navbar-brand font-white">STUDENT ENROLLMENT SYSTEM</div>
         </div>
@@ -83,6 +85,7 @@
 </div>
 </nav>
 </div>
+
 <div growl></div>
 <div ui-view></div>
 <!-- <footer class="footer">
