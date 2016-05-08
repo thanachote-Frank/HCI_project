@@ -239,21 +239,21 @@
                           <table class="table">
                             <thead>
                               <tr>
-                                <th>Section</th>
-                                <th>Day/Time</th>
-                                <th>Localtion</th>
-                                <th>Enrolled/Max</th>
-                                <th>Instructor</th>
+                                <th class="text-center">Section</th>
+                                <th class="text-center">Day/Time</th>
+                                <th class="text-center">Localtion</th>
+                                <th class="text-center">Enrolled/Max</th>
+                                <th class="text-center">Instructor</th>
                                 <th></th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr ng-repeat="section in todoList._course_list[course.id].sections">
-                                <td>{{section.id}}</td>
-                                <td>{{section.date}}</td>
-                                <td>{{section.location}}</td>
+                                <td class="text-center">{{section.id}}</td>
+                                <td class="text-center">{{section.date}}</td>
+                                <td class="text-center">{{section.location}}</td>
                                 <td class="text-center">{{section.enrolled}}/{{section.accept}}</td>
-                                <td><p ng-repeat="instructor in section.instructors">{{instructor}}</p></td>
+                                <td class="text-center"><p ng-repeat="instructor in section.instructors">{{instructor}}</p></td>
                                 <td>
                                   <button type="button" class="btn btn-primary pull-right" ng-click="todoList.add_course(course,450)" data-dismiss="modal">Enroll</button>
                                 </td>
