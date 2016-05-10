@@ -11,6 +11,21 @@ div[data-ng-view]{
   background-color: #47810C !important;
 
 }*/
+.select_nav{
+  background-color: #47810C;
+  border-radius: 0px;
+}
+/*.btn-primary {
+    color: #fff;
+    background-color: #5E8CB3;
+    border-color: #5E8CB3;
+}*/
+.underline-nav{
+  /*border-bottom-color: black;
+  border-bottom: 4px;
+  border-bottom-style: solid;
+  border-radius: 0px;*/
+}
 .cus-nav{
   margin-top: 70px;
   box-shadow: 10px 10px 5px #888888;
@@ -27,10 +42,16 @@ a{
 .navbar {
   border-radius: 0px;
 }
+.nav-pills>li>a{
+  /*border-radius: 0px;*/
+}
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
     background-color: #47810C;
     color: #FFFFFF;
-    border-radius: 0px;
+    border-radius: 0px !important;
+    /*border-bottom-color: black;
+    border-bottom: 4px;
+    border-bottom-style: solid;*/
 }
 .borderless tbody tr td, .borderless th {
     border: none;

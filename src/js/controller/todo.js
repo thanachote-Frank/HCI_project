@@ -1,5 +1,5 @@
-angular.module('todoApp', ['ui.router', 'angular-growl'])
-.controller('TodoListController', function ($http, $location, TodoListService, growl, $rootScope, $scope, $window, $anchorScroll) {
+angular.module('todoApp', ['ui.router', 'angular-growl', 'ngStorage'])
+.controller('TodoListController', function ($http, $location, TodoListService, growl, $rootScope, $scope, $window, $anchorScroll, $localStorage, $sessionStorage,$timeout) {
   var todoList = this
   todoList.course_list = []
   todoList.my_courses = TodoListService.get()
@@ -7,7 +7,27 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
   todoList.password = ""
   todoList.isLogin = TodoListService.status_login()
   todoList.json = {}
+  $rootScope.path = $location.url()
+  $rootScope.$storage = $localStorage
+  console.log($localStorage)
+  // if (todoList.path == "/user_information/registeration_information"){
+  //
+  // }
   // $rootScope.login = true;
+  // if (todoList.isLogin){
+  //   $location.path('/login')
+  // }
+  $scope.clock = ""; // initialise the time variable
+  $scope.tickInterval = 1000 //ms
+
+  var tick = function() {
+      $scope.clock = Date.now() // get the current time
+      $timeout(tick, $scope.tickInterval); // reset the timer
+  }
+
+  // Start the timer
+  $timeout(tick, $scope.tickInterval);
+
 
   $http.get('https://whsatku.github.io/skecourses/list.json')
   .success(function(respone){
@@ -80,6 +100,7 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
       // }
       // todoList.todos.push({text: todoList.todoText, done: false})
       // todoList.todoText = ''
+      // console.log("**----" + TodoListService.login(todoList.username, todoList.password))
       if (TodoListService.login(todoList.username, todoList.password)){
         todoList.isLogin = TodoListService.status_login()
         // growl.success("You have successfully <b>logged in</b>.")
@@ -102,7 +123,7 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
       var data = todoList.my_courses
       var json = []
       for (var i=0; i<data.length; i++){
-        console.log(data[i])
+        // console.log(data[i])
         var _data = {"id":data[i].id, "section":data[i].selected_section, "creditType":todoList._course_list[data[i].id].credit_type}
         json.push(_data)
       }
@@ -112,7 +133,7 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
 
     todoList.save_to_file = function () {
       data = todoList.json
-      console.log(data)
+      // console.log(data)
       var filename = "enrollment.json"
       if (!data) {
         console.error('No data');
@@ -143,12 +164,12 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
       // set the location.hash to the id of
       // the element you wish to scroll to.
       $location.hash('courses');
-      console.log(2222)
+      // console.log(2222)
 
       // call $anchorScroll()
       $anchorScroll();
     }
-    todoList.gotoSerach()
+    // todoList.gotoSerach()
     // todoList.set_credit_type = function(){
     //   todoList._course_list[course.id]['credit_type']
     // }
@@ -172,9 +193,16 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
       // todoList.my_courses.push(course)
       // console.log("Enroll: " + todoList.my_courses)
       if (todoList.get_total_credit() + todoList._course_list[course.id]['credit'].total <= 22){
+        for (var i=0; i<todoList.my_courses.length;i++){
+          if (todoList.my_courses[i].id == course.id){
+            growl.error("You have enrolled " + course.id +".");
+            return
+          }
+        }
         course.selected_section = sec
         todoList.my_courses.push(course)
-        // console.log("Enroll: " + todoList.my_courses)
+        $rootScope.$storage.enroll_data[$rootScope.username] = todoList.my_courses
+        console.log("Enroll: " + $rootScope.$storage.enroll_data[$rootScope.username])
         growl.success(course.id + " - Added");
       }
       else{
@@ -182,6 +210,7 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
       }
     }
     todoList.remove_course = function (course) {
+      growl.success("Your have droped " + course.id)
       todoList.my_courses.remove(course)
       // console.log("Enroll: " + todoList.my_courses)
     }
@@ -205,6 +234,9 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
       // }
       return total
     }
+    todoList.check_course = function(course){
+        return todoList.my_courses.map(function(x) {return x.id; }).indexOf(course.id)
+    }
 
     Array.prototype.remove = function() {
       var what, a = arguments, L = a.length, ax;
@@ -217,17 +249,26 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
       return this;
     };
   })
-  .service('TodoListService', function($rootScope) {
+  .service('TodoListService', function($rootScope, $localStorage, $sessionStorage) {
     var todoList = this
+    $rootScope.$storage = $localStorage
     todoList.save = function (courses) {
-      todoList.courses = courses;
+      todoList.courses = courses
     }
     todoList.get = function () {
-      console.log(todoList.courses)
-      if (todoList.courses ==  undefined){
-        todoList.courses = []
+      if (!$rootScope.$storage.enroll_data){
+          $rootScope.$storage.enroll_data = {}
       }
-      console.log(todoList.courses)
+      if (!$rootScope.$storage.enroll_data[$rootScope.username]){
+          $rootScope.$storage.enroll_data[$rootScope.username] = []
+      }
+      if ($rootScope.$storage.enroll_data[$rootScope.username]){
+          todoList.courses = $rootScope.$storage.enroll_data[$rootScope.username]
+      }
+      // if (todoList.courses ==  undefined){
+      //   todoList.courses = []
+      // }
+      // console.log("-+++- " + todoList.courses)
       return todoList.courses
     }
     todoList.login = function (username, password) {
@@ -238,9 +279,18 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
       //   todoList.isLogin = bool
       // }
       // todoList.isLogin = false
-      if (username != "" && password != ""){
+      var isnum = /^\d+$/.test(username);
+      // console.log(isnum)
+      // console.log(username)
+      // console.log(username.length == 10)
+      // console.log(password != "")
+      // console.log((username.startsWith("5610") && isnum && username.length == 10 && password != ""))
+      if (username.startsWith("5610") && isnum && username.length == 10 && password != ""){
+        $rootScope.username = username
         $rootScope.login = true
+        // console.log("333333333" + $rootScope.login)
       }
+
       return $rootScope.login
     }
     todoList.status_login = function () {
@@ -255,6 +305,7 @@ angular.module('todoApp', ['ui.router', 'angular-growl'])
       //   todoList.isLogin = false
       // }
       $rootScope.login =false
+      todoList.courses = []
       return $rootScope.login
     }
   })
