@@ -28,7 +28,10 @@
     <nav class="navbar navbar-fixed-top bg-green">
       <div class="container-fluid col-md-offset-0 col-md-12 col-lg-10 col-lg-offset-1">
         <div class="navbar-header">
-          <div class="navbar-brand font-white">STUDENT ENROLLMENT SYSTEM</div>
+          <!-- <div> -->
+            <img class="pull-left" src="logo.png" style="height:50px;">
+          <!-- </div> -->
+          <div class="navbar-brand font-white" style="font-size: 16px;padding-top: 10px;padding-left: 19px;">COURSE ENROLLMENT SYSTEM<p style="line-height: 5px;"><small style="font-size: 10px;">KASETSART UNIVERSITY</small></p></div>
         </div>
         <ul class="nav navbar-nav nav-pills">
           <li class="font-white" role="presentation">
@@ -50,14 +53,14 @@
       <li role="presentation" ng-show="login">
         <a ui-sref="registration">
           <div class="link">
-            <strong>Registration</strong>
+            Registration
           </div>
         </a>
       </li>
       <li role="presentation" ng-show="login">
         <a ui-sref="user_profile">
           <div class="link">
-            <strong>User Information</strong>
+            User Information
           </div>
         </a>
       </li>
@@ -70,21 +73,21 @@
     <li role="presentation" ng-show="login">
       <div style="padding: 15px;">
         <div class="link">
-          <strong>ID: 5610545692</strong>
+          ID: 5610545692
         </div>
       </div>
     </li>
     <li role="presentation" ng-show="login">
       <a ui-sref="login" ng-click="todoList.logout()">
         <div class="link">
-          <strong>Log out</strong>
+          Log out
         </div>
       </a>
     </li>
     <li role="presentation" ng-show="!login">
       <a ui-sref="login">
         <div class="link">
-          <strong>Log in</strong>
+          Log in
         </div>
       </a>
     </li>

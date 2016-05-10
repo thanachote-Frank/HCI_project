@@ -3,11 +3,11 @@
   <div ng-controller="TodoListController as todoList">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-2 col-lg-offset-3 toppad" >
-        <div class="panel with-nav-tabs panel-primary">
-          <div class="panel-heading bg-green">
+        <div class="panel with-nav-tabs panel-primary" style="border-color: #84A75F;">
+          <div class="panel-heading bg-green" class="tab-green" style="background-color: #84A75F;border-color: #84A75F;">
             <!-- <h3 class="panel-title">User Profile</h3> -->
             <ul class="nav nav-tabs">
-                <li class="col-xs-5 active"><a ui-sref="user_information"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <strong>User Profile</strong></a></li>
+                <li class="col-xs-5 active"><a class="tab-green" ui-sref="user_information" style="border-top-color: #84A75F;border-left-color: #84A75F;border-right-color: #84A75F;"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <strong>User Profile</strong></a></li>
                 <li class="col-xs-7"><a ui-sref="registeration_information"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> <strong>Registeration Information</strong></a></li>
               </ul>
           </div>

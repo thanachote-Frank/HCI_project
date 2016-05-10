@@ -7,6 +7,10 @@ body { padding-top: 70px; }
 div[data-ng-view]{
    height: 150%;
 }
+/*.with-nav-tabs.panel-primary .nav-tabs > li > a:hover, .with-nav-tabs.panel-primary .nav-tabs > li > a:focus{
+  background-color: #47810C !important;
+
+}*/
 .cus-nav{
   margin-top: 70px;
   box-shadow: 10px 10px 5px #888888;
@@ -26,6 +30,7 @@ a{
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
     background-color: #47810C;
     color: #FFFFFF;
+    border-radius: 0px;
 }
 .borderless tbody tr td, .borderless th {
     border: none;
@@ -239,7 +244,7 @@ body {
 .with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
 .with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
 	color: #fff;
-	background-color: #3071a9;
+	background-color: #47810C;
 	border-color: transparent;
 }
 .with-nav-tabs.panel-primary .nav-tabs > li.active > a,
