@@ -26,8 +26,8 @@ angular.module('todoApp')
       url: "/user_information/user_profile",
       templateUrl: "src/view/user_information.tmpl"
     })
-    .state('registeration_information', {
-      url: "/user_information/registeration_information",
-      templateUrl: "src/view/registeration_information.tmpl"
+    .state('registration_information', {
+      url: "/user_information/registration_information",
+      templateUrl: "src/view/registration_information.tmpl"
     })
 });
